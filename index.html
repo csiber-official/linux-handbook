@@ -8,92 +8,68 @@
   <script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/markdown-it-emoji@3/dist/markdown-it-emoji.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/markdown-it-task-lists@2/dist/markdown-it-task-lists.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@4/dist/markdown-it-footnote.min.js"></script>
   <style>
-    :root {
-      --red: #ff3366; --pink: #ff66cc; --purple: #9966ff; --blue: #3366ff;
-      --cyan: #00ffff; --green: #00ff99; --yellow: #ffff33; --orange: #ff9933;
-      --bg: #fafafa; --text: #1a1a1a; --card: white;
-    }
+    :root { --r: #ff3366; --p: #ff66cc; --u: #9966ff; --b: #3366ff; --c: #00ffff; --g: #00ff99; --y: #ffff33; --o: #ff9933; --bg: #fafafa; --text: #1a1a1a; --card: white; }
     .dark { --bg: #0d1117; --text: #f0f6fc; --card: #161b22; }
-    
-    body { margin:0; font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.8; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); }
-    .container { max-width:880px; margin:0 auto; padding:2rem 1rem; }
-    header { text-align:center; padding:4rem 1rem; background:linear-gradient(135deg, var(--red), var(--purple), var(--cyan)); -webkit-background-clip:text; background-clip:text; color:transparent; }
-    h1 { font-size:4.5rem; font-weight:900; margin:0; background:linear-gradient(90deg, #ff3366, #ff66cc, #9966ff, #3366ff, #00ffff); -webkit-background-clip:text; color:transparent; }
+    body { margin:0; font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.8; transition:all 0.4s; }
     .mode { position:fixed; top:20px; right:20px; z-index:999; background:rgba(255,255,255,0.15); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.2); color:white; padding:12px 20px; border-radius:50px; cursor:pointer; font-weight:600; }
-    .content { background:var(--card); border-radius:24px; padding:3rem; box-shadow:0 20px 60px rgba(0,0,0,0.1); margin:2rem 0; border:1px solid rgba(255,255,255,0.1); }
-    pre { background:linear-gradient(135deg,#1e1e1e,#2d2d2d) !important; border-radius:16px !important; padding:1.5rem !important; overflow-x:auto; border-left:6px solid var(--cyan) !important; }
-    code { font-family:'JetBrains Mono',monospace !important; }
-    h2 { color:var(--purple); border-bottom:4px solid var(--cyan); padding-bottom:0.5rem; }
-    h3 { color:var(--pink); }
-    blockquote { border-left:6px solid var(--yellow); background:rgba(255,255,51,0.1); padding:1.5rem; border-radius:12px; font-style:italic; }
-    a { color:var(--blue); text-decoration:underline; text-decoration-color:var(--cyan); }
-    .rainbow { background:linear-gradient(90deg, var(--red), var(--orange), var(--yellow), var(--green), var(--cyan), var(--blue), var(--purple)); -webkit-background-clip:text; color:transparent; font-weight:900; }
-    @media (max-width:768px) { h1{font-size:3rem;} .content{padding:2rem;} }
+    header { text-align:center; padding:5rem 1rem; }
+    h1 { font-size:5rem; font-weight:900; margin:0; background:linear-gradient(90deg,var(--r),var(--p),var(--u),var(--b),var(--c)); -webkit-background-clip:text; color:transparent; }
+    .container { max-width:920px; margin:0 auto; padding:2rem 1rem; }
+    .content { background:var(--card); border-radius:28px; padding:3rem; box-shadow:0 25px 70px rgba(0,0,0,0.12); border:1px solid rgba(255,255,255,0.1); }
+    pre { background:#0d1117; color:#f0f6fc; padding:1.5rem; border-radius:16px; overflow-x:auto; border-left:8px solid var(--c); }
+    code { font-family:'JetBrains Mono',monospace; }
+    h2 { font-size:2.4rem; background:linear-gradient(90deg,var(--p),var(--c)); -webkit-background-clip:text; color:transparent; }
+    blockquote { border-left:8px solid var(--y); background:rgba(255,255,51,0.1); padding:1.5rem; border-radius:12px; }
+    .toc { background:linear-gradient(135deg,var(--u),var(--c)); color:white; padding:2rem; border-radius:20px; text-align:center; margin:2rem 0; }
+    .toc a { color:white; font-weight:600; }
+    hr { border:2px dashed var(--c); margin:4rem 0; }
   </style>
 </head>
 <body>
   <div class="mode" onclick="document.body.classList.toggle('dark')">Dark Mode</div>
-  
+
   <header>
     <h1>Linux Handbook</h1>
-    <p style="color:white;font-size:1.4rem;opacity:0.9;">Next-Gen Reading Experience • CSIBER 2025</p>
+    <p style="font-size:1.5rem;color:#666;margin-top:1rem;">Next-Gen Reading Experience • CSIBER 2025</p>
   </header>
 
   <div class="container">
-    <div class="content" id="book"></div>
+    <div class="content" id="book">Loading the handbook...</div>
   </div>
 
   <script>
-    const md = markdownIt({
-      html: true,
-      linkify: true,
-      typographer: true,
-      highlight: (str, lang) => {
-        return `<pre class="language-${lang}"><code>${md.utils.escapeHtml(str)}</code></pre>`;
-      }
-    })
-    .use(markdownItEmoji)
-    .use(markdownItTaskLists)
-    .use(markdownItFootnote);
+    const md = markdownIt({ html:true, linkify:true, typographer:true })
+      .use(markdownItEmoji)
+      .use(markdownItTaskLists);
 
-    // Load all Volume 2 chapters in order
-    const chapters = [
-      "volume-2/01-introduction.md",
-      "volume-2/02-advanced-file-systems.md",
-      "volume-2/03-linux-server-administration.md",
-      "volume-2/04-advanced-networking.md",
-      "volume-2/05-system-security-and-hardening.md",
-      "volume-2/06-virtualization-and-containers.md",
-      "volume-2/07-high-availability-and-clustering.md",
-      "volume-2/08-linux-automation-ansible.md",
-      "volume-2/09-advanced-backup-and-recovery.md",
-      "volume-2/10-performance-tuning.md",
-      "volume-2/11-troubleshooting-and-debugging.md",
-      "volume-2/12-real-world-projects.md"
-    ];
+    // Your actual filenames
+    const chapters = Array.from({length:12}, (_,i) => `volume-2/chapter_${i+1}.md`);
 
-    let full = `# Linux Handbook – Volume 2\n\n**Advanced Enterprise Linux**\n\n---\n\n`;
-    let toc = `<div style="background:linear-gradient(135deg,var(--purple),var(--cyan));color:white;padding:2rem;border-radius:20px;text-align:center;margin:2rem 0;"><h2 class="rainbow">Table of Contents</h2></div><ul style="columns:2;font-size:1.2rem;">`;
-
-    chapters.forEach((file, i) => {
-      const num = String(i+1).padStart(2,'0');
-      const title = file.split('/').pop().replace(/^\d+-/, '').replace(/.md$/, '').replace(/-/g, ' ');
-      toc += `<li><a href="#ch${num}" style="color:var(--cyan);font-weight:600;">${num} ${title.charAt(0).toUpperCase() + title.slice(1)}</a></li>`;
-      full += `<div id="ch${num}"><h1 style="font-size:3rem;color:transparent;background:linear-gradient(90deg,var(--red),var(--cyan));-webkit-background-clip:text;">${num} ${title.charAt(0).toUpperCase() + title.slice(1)}</h1><hr></div>\n`;
+    let full = `<div class="toc"><h2>Table of Contents</h2><ol style="columns:2;gap:2rem;font-size:1.2rem;">`;
+    chapters.forEach((f,i) => {
+      const num = (i+1).toString().padStart(2,'0');
+      full += `<li><a href="#ch${num}">${num} Chapter ${i+1}</a></li>`;
     });
-    toc += `</ul><hr>`;
+    full += `</ol></div><hr>`;
 
     let loaded = 0;
-    chapters.forEach(file => {
-      fetch(file).then(r => r.text()).then(text => {
-        full += md.render(text) + `<br><br><hr style="border:2px dashed var(--cyan);"><br><br>`;
-        loaded++;
-        if (loaded === chapters.length) {
-          document.getElementById('book').innerHTML = toc + full;
-        }
-      });
+    chapters.forEach((file, i) => {
+      const num = (i+1).toString().padStart(2,'0');
+      fetch(file)
+        .then(r => r.text())
+        .then(text => {
+          full += `<div id="ch${num}"><h2>Chapter ${i+1}</h2>${md.render(text)}</div><hr>`;
+          loaded++;
+          if (loaded === 12) {
+            document.getElementById('book').innerHTML = full;
+          }
+        })
+        .catch(() => {
+          full += `<div id="ch${num}"><h2>Chapter ${i+1}</h2><p style="color:red;">File not found: ${file}</p></div><hr>`;
+          loaded++;
+          if (loaded === 12) document.getElementById('book').innerHTML = full;
+        });
     });
   </script>
 </body>
