@@ -187,7 +187,7 @@ As you progress, you’ll tackle real-world challenges—securing servers, autom
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="volume-2/chapter_2.md" rel="next">Chapter 2: Advanced File Systems and Storage →</a>
+    <a href="chapter_2.md" rel="next">Chapter 2: Advanced File Systems and Storage →</a>
   </div>
 </nav>
 <!-- markdownlint-enable MD033 -->
