@@ -411,8 +411,8 @@ These skills lay the groundwork for later chapters, such as advanced networking 
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_2.md" rel="prev">← Chapter 2: Advanced File Systems and Storage</a>
-    <a href="chapter_4.md" rel="next">Chapter 4: Advanced Networking →</a>
+    <a href="/volume-2/chapter_2.md" rel="prev">← Chapter 2: Advanced File Systems and Storage</a>
+    <a href="/volume-2/chapter_4.md" rel="next">Chapter 4: Advanced Networking →</a>
   </div>
 </nav>
 <!-- markdownlint-enable MD033 -->

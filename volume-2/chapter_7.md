@@ -471,8 +471,8 @@ Keep practicing in lab environments. Break things. Fix them. That’s how you be
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_6.md" rel="prev">← Chapter 6: Virtualization and Containers</a>
-    <a href="chapter_8.md" rel="next">Chapter 8: Automation →</a>
+    <a href="/volume-2/chapter_6.md" rel="prev">← Chapter 6: Virtualization and Containers</a>
+    <a href="/volume-2/chapter_8.md" rel="next">Chapter 8: Automation →</a>
   </div>
 </nav>
 ---

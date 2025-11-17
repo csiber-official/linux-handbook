@@ -233,8 +233,8 @@ These skills connect with security practices from Chapter 5 and pave the way for
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_5.md" rel="prev">← Chapter 5: System Security and Hardening</a>
-    <a href="chapter_7.md" rel="next">Chapter 7: High Availability and Load Balancing →</a>
+    <a href="/volume-2/chapter_5.md" rel="prev">← Chapter 5: System Security and Hardening</a>
+    <a href="/volume-2/chapter_7.md" rel="next">Chapter 7: High Availability and Load Balancing →</a>
   </div>
 </nav>
 <!-- markdownlint-enable MD033 -->

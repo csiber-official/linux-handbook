@@ -1,41 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Linux Handbook – CSIBER Official</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Linux Handbook – CSIBER Official (Full Single Page)</title>
+  <meta name="description" content="Complete Linux Handbook by CSIBER – Beginner to Advanced in one scrollable page"/>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root { --red: #ee0000; --dark: #1c1e21; --light: #f8f9fa; --gray: #6c757d; }
+    body { margin:0; font-family:'Overpass',sans-serif; background:var(--light); color:#333; line-height:1.7; transition:background 0.3s,color 0.3s; }
+    body.dark { background:#1e1e1e; color:#e0e0e0; }
+    header { background:linear-gradient(135deg,var(--red),#b30000); color:white; text-align:center; padding:4rem 1rem; }
+    h1 { font-size:3.5rem; margin:0; }
+    h1 span { color:#ffed00; }
+    .container { max-width:1000px; margin:0 auto; padding:2rem; }
+    .toc { background:white; border-radius:12px; padding:1.5rem; margin:2rem 0; box-shadow:0 4px 20px rgba(0,0,0,0.1); }
+    body.dark .toc { background:#2d2d2d; }
+    .chapter { background:white; margin:3rem 0; padding:2rem; border-radius:12px; box-shadow:0 6px 25px rgba(0,0,0,0.1); }
+    body.dark .chapter { background:#2d2d2d; }
+    pre { background:#f4f4f4; padding:1rem; border-radius:8px; overflow-x:auto; }
+    body.dark pre { background:#333; }
+    .toggle { position:fixed; top:20px; right:20px; z-index:999; background:var(--red); color:white; border:none; padding:12px 18px; border-radius:50px; cursor:pointer; font-weight:bold; }
+    footer { text-align:center; padding:3rem; background:var(--dark); color:#aaa; }
+    a { color:var(--red); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <button class="toggle" onclick="document.body.classList.toggle('dark')">🌙 Dark Mode</button>
+
+  <header>
+    <h1>Linux Handbook <span>CSIBER</span></h1>
+    <p style="font-size:1.4rem;opacity:0.9;">Complete Beginner to Enterprise Guide • 2025 Edition</p>
+    <p>Made with ❤️ by Aman</p>
+  </header>
+
+  <div class="container">
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <p><strong>Volume 2 – Advanced Linux Handbook</strong></p>
+      <ol>
+        <li><a href="#ch01">Introduction to Advanced Linux Concepts</a></li>
+        <li><a href="#ch02">Advanced File Systems and Storage</a></li>
+        <li><a href="#ch03">Linux Server Administration</a></li>
+        <li><a href="#ch04">Advanced Networking</a></li>
+        <li><a href="#ch05">System Security and Hardening</a></li>
+        <li><a href="#ch06">Virtualization and Containers</a></li>
+        <li><a href="#ch07">High Availability and Clustering</a></li>
+        <li><a href="#ch08">Linux Automation and Configuration Management</a></li>
+        <li><a href="#ch09">Advanced Backup and Recovery</a></li>
+        <li><a href="#ch10">Performance Tuning and Optimization</a></li>
+        <li><a href="#ch11">Troubleshooting and Debugging</a></li>
+        <li><a href="#ch12">Real-World Projects</a></li>
+      </ol>
+      <p><a href="/pdf/Linux-Handbook-Volume-2.pdf">Download Volume 2 PDF</a></p>
+    </div>
+
+    <div id="content">
+      <!-- All your rewritten Markdown content will be pasted below as HTML -->
+      <!-- Just open each .md file, copy the rendered HTML from browser preview, and paste here -->
+
+      <!-- Example placeholder – replace everything below with your actual content -->
+      <div class="chapter" id="ch01">
+        <h2>01 Introduction to Advanced Linux Concepts</h2>
+        <p>Paste your full rewritten chapter content here...</p>
+      </div>
+
+      <div class="chapter" id="ch02">
+        <h2>02 Advanced File Systems and Storage</h2>
+        <p>Your rewritten chapter goes here...</p>
+      </div>
+      <!-- Repeat for all 12 chapters -->
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 CSIBER Official • <a href="https://csiber-official.github.io">csiber-official.github.io</a></p>
+  </footer>
 
   <script>
-    window.$docsify = {
-      name: 'Linux Handbook',
-      repo: 'csiber-official/linux-handbook',
-      maxLevel: 4,
-      loadSidebar: true,
-      coverpage: true,
-      subMaxLevel: 3,
-      auto2top: true,
-      search: { placeholder: 'Search chapters...' },
-      themeable: {
-        readyTransition: true,
-        responsiveTables: true
-      },
-      pagination: {
-        previousText: '← Previous Chapter',
-        nextText: 'Next Chapter →',
-        crossChapter: true,
-        crossChapterText: true
-      },
-      alias: { '/.*/_sidebar.md': '/_sidebar.md' }
-    }
+    // Smooth scroll for TOC links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
   </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-search@2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@1"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2"></script>
 </body>
 </html>

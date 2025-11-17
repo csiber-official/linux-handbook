@@ -466,8 +466,8 @@ Next up: **Chapter 9 – Advanced Backup and Recovery**.
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_7.md" rel="prev">← Chapter 7: High Availability and Clustering</a>
-    <a href="chapter_9.md" rel="next">Chapter 9: Automation →</a>
+    <a href="/volume-2/chapter_7.md" rel="prev">← Chapter 7: High Availability and Clustering</a>
+    <a href="/volume-2/chapter_9.md" rel="next">Chapter 9: Advanced Backup and Recovery→</a>
   </div>
 </nav>
 <!-- markdownlint-enable MD033 -->

@@ -457,8 +457,8 @@ These skills support earlier chapters on server administration and prepare you f
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_3.md" rel="prev">← Chapter 3: Networking Fundamentals</a>
-    <a href="chapter_5.md" rel="next">Chapter 5: System Security and Hardening →</a>
+    <a href="/volume-2/chapter_3.md" rel="prev">← Chapter 3: Networking Fundamentals</a>
+    <a href="/volume-2/chapter_5.md" rel="next">Chapter 5: System Security and Hardening →</a>
   </div>
 </nav>
 <!-- markdownlint-enable MD033 -->

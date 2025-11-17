@@ -434,8 +434,8 @@ Keep testing restores. **The backup that isn’t tested doesn’t exist.**
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_8.md" rel="prev">← Chapter 8: Backup and Recovery</a>
-    <a href="chapter_10.md" rel="next">Chapter 10: Performance Tuning →</a>
+    <a href="/volume-2/chapter_8.md" rel="prev">← Chapter 8: Backup and Recovery</a>
+    <a href="/volume-2/chapter_10.md" rel="next">Chapter 10: Performance Tuning →</a>
   </div>
 </nav>
 ---

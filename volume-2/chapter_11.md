@@ -341,8 +341,8 @@ This foundation powers:
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_10.md" rel="prev">← Chapter 10: Performance Tuning</a>
-    <a href="chapter_12.md" rel="next">Chapter 12: Real-World Projects →</a>
+    <a href="/volume-2/chapter_10.md" rel="prev">← Chapter 10: Performance Tuning</a>
+    <a href="/volume-2/chapter_12.md" rel="next">Chapter 12: Real-World Projects →</a>
   </div>
 </nav>
 ---

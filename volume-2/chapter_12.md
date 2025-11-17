@@ -342,7 +342,7 @@ You mastered:
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_11.md" rel="prev">← Chapter 11: Backup and Recovery</a>
+    <a href="/volume-2/chapter_11.md" rel="prev">← Chapter 11: Backup and Recovery</a>
   </div>
 </nav>
 <!-- markdownlint-enable MD033 -->

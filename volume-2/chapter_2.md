@@ -477,8 +477,8 @@ You now understand advanced Linux storage concepts including LVM, RAID, NFS, Sam
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_1.md" rel="prev">← Chapter 1: Introduction to Advanced Linux Concepts</a>
-    <a href="chapter_3.md" rel="next">Chapter 3: Linux Server Administration →</a>
+    <a href="/volume-2/chapter_1.md" rel="prev">← Chapter 1: Introduction to Advanced Linux Concepts</a>
+    <a href="/volume-2/chapter_3.md" rel="next">Chapter 3: Linux Server Administration →</a>
   </div>
 </nav>
 <!-- markdownlint-enable MD033 -->

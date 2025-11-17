@@ -386,8 +386,8 @@ These skills build on prior chapters (e.g., firewall management in Chapter 3, ne
 <!-- markdownlint-disable MD033 -->
 <nav class="chapter-nav" aria-label="Chapter navigation">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <a href="chapter_4.md" rel="prev">← Chapter 4: Networking Concepts</a>
-    <a href="chapter_6.md" rel="next">Chapter 6: Virtualization and Containers →</a>
+    <a href="/volume-2/chapter_4.md" rel="prev">← Chapter 4: Networking Concepts</a>
+    <a href="/volume-2/chapter_6.md" rel="next">Chapter 6: Virtualization and Containers →</a>
   </div>
 </nav>
 <!-- markdownlint-enable MD033 -->
