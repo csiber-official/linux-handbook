@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Linux Handbook - CSIBER Official</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name: 'Linux Handbook',
+      repo: 'csiber-official/linux-handbook',
+      maxLevel: 4,
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      coverpage: true,
+      search: 'auto',
+      themeable: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-search@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-copy-code@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+</body>
+</html>
