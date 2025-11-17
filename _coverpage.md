@@ -1,12 +1,12 @@
-![logo](https://csiber-official.github.io/assets/logo.png)
+![logo](https://csiber.ac.in/wp-content/uploads/2023/08/CSIBER-Logo.png)
 
-# Linux Handbook
-### Complete Beginner to Advanced Guide
+# Linux Handbook  
+**Volume 2 – Advanced Linux**
 
-**Volume 1 & Volume 2**  
-By CSIBER Tech Community
+Complete enterprise-grade Linux guide  
+by CSIBER students & faculty
 
-<small>Free • Open Source • Forever</small>
+<small>Open Source • Free Forever • 2025 Edition</small>
 
-[Start Reading](#volume-1/introduction)  
+[Start Reading](#volume-2-advanced-linux-handbook)  
 [Download PDFs](/pdf/)
