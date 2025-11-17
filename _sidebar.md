@@ -1,5 +1,6 @@
 - **Home**
   - [Cover](/)
+  - [Choose Volume](/volume-selection)
 
 - **Volume 2 – Advanced Linux Handbook**
   - [01 Introduction to Advanced Linux Concepts](volume-2/chapter_1.md)
@@ -16,5 +17,4 @@
   - [12 Bring It All Together: Real-World Projects](volume-2/chapter_12.md)
 
 - **Downloads**
-  - [Volume 1 PDF](/pdf/Linux-Handbook-Volume-1.pdf)
   - [Volume 2 PDF](/pdf/Linux-Handbook-Volume-2.pdf)
