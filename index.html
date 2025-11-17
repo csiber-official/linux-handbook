@@ -8,22 +8,21 @@
   <script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/markdown-it-emoji@3/dist/markdown-it-emoji.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/markdown-it-task-lists@2/dist/markdown-it-task-lists.min.js"></script>
+  
   <style>
-    :root { --r: #ff3366; --p: #ff66cc; --u: #9966ff; --b: #3366ff; --c: #00ffff; --g: #00ff99; --y: #ffff33; --o: #ff9933; --bg: #fafafa; --text: #1a1a1a; --card: white; }
-    .dark { --bg: #0d1117; --text: #f0f6fc; --card: #161b22; }
-    body { margin:0; font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.8; transition:all 0.4s; }
-    .mode { position:fixed; top:20px; right:20px; z-index:999; background:rgba(255,255,255,0.15); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.2); color:white; padding:12px 20px; border-radius:50px; cursor:pointer; font-weight:600; }
+    :root { --r:#ff3366; --p:#ff66cc; --u:#9966ff; --b:#3366ff; --c:#00ffff; --g:#00ff99; --y:#ffff33; --bg:#fafafa; --text:#1a1a1a; --card:white; }
+    .dark { --bg:#0d1117; --text:#f0f6fc; --card:#161b22; }
+    body { margin:0; font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.8; transition:all .4s; }
+    .mode { position:fixed; top:20px; right:20px; z-index:999; background:rgba(255,255,255,.15); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,.2); color:white; padding:12px 20px; border-radius:50px; cursor:pointer; font-weight:600; }
     header { text-align:center; padding:5rem 1rem; }
     h1 { font-size:5rem; font-weight:900; margin:0; background:linear-gradient(90deg,var(--r),var(--p),var(--u),var(--b),var(--c)); -webkit-background-clip:text; color:transparent; }
     .container { max-width:920px; margin:0 auto; padding:2rem 1rem; }
-    .content { background:var(--card); border-radius:28px; padding:3rem; box-shadow:0 25px 70px rgba(0,0,0,0.12); border:1px solid rgba(255,255,255,0.1); }
+    .content { background:var(--card); border-radius:28px; padding:3rem; box-shadow:0 25px 70px rgba(0,0,0,.12); border:1px solid rgba(255,255,255,.1); }
     pre { background:#0d1117; color:#f0f6fc; padding:1.5rem; border-radius:16px; overflow-x:auto; border-left:8px solid var(--c); }
-    code { font-family:'JetBrains Mono',monospace; }
-    h2 { font-size:2.4rem; background:linear-gradient(90deg,var(--p),var(--c)); -webkit-background-clip:text; color:transparent; }
-    blockquote { border-left:8px solid var(--y); background:rgba(255,255,51,0.1); padding:1.5rem; border-radius:12px; }
-    .toc { background:linear-gradient(135deg,var(--u),var(--c)); color:white; padding:2rem; border-radius:20px; text-align:center; margin:2rem 0; }
-    .toc a { color:white; font-weight:600; }
-    hr { border:2px dashed var(--c); margin:4rem 0; }
+    h2 { font-size:2.6rem; background:linear-gradient(90deg,var(--p),var(--c)); -webkit-background-clip:text; color:transparent; margin:2rem 0 1rem; }
+    .toc { background:linear-gradient(135deg,var(--u),var(--c)); color:white; padding:2.5rem; border-radius:24px; text-align:center; margin:2rem 0; }
+    .toc a { color:white; font-weight:600; font-size:1.1rem; }
+    hr { border:2px dashed var(--c); margin:5rem 0; }
   </style>
 </head>
 <body>
@@ -31,7 +30,7 @@
 
   <header>
     <h1>Linux Handbook</h1>
-    <p style="font-size:1.5rem;color:#666;margin-top:1rem;">Next-Gen Reading Experience • CSIBER 2025</p>
+    <p style="font-size:1.5rem;color:#666;margin-top:1rem;">Volume 2 – Advanced Linux • CSIBER 2025</p>
   </header>
 
   <div class="container">
@@ -39,34 +38,49 @@
   </div>
 
   <script>
-    const md = markdownIt({ html:true, linkify:true, typographer:true })
-      .use(markdownItEmoji)
-      .use(markdownItTaskLists);
+    const md = window.markdownit({ html:true, linkify:true, typographer:true })
+      .use(window.markdownitEmoji)
+      .use(window.markdownitTaskLists);
 
-    // Your actual filenames
-    const chapters = Array.from({length:12}, (_,i) => `volume-2/chapter_${i+1}.md`);
+    // Your real file names (backend)
+    const files = Array.from({length:12}, (_,i) => `volume-2/chapter_${i+1}.md`);
 
-    let full = `<div class="toc"><h2>Table of Contents</h2><ol style="columns:2;gap:2rem;font-size:1.2rem;">`;
-    chapters.forEach((f,i) => {
+    // Beautiful chapter titles (frontend display)
+    const titles = [
+      "Introduction to Advanced Linux Concepts",
+      "Advanced File Systems and Storage",
+      "Linux Server Administration",
+      "Advanced Networking",
+      "System Security and Hardening",
+      "Virtualization and Containers",
+      "High Availability and Clustering",
+      "Linux Automation and Configuration Management",
+      "Advanced Backup and Recovery",
+      "Performance Tuning and Optimization",
+      "Troubleshooting and Debugging",
+      "Bring It All Together: Real-World Projects"
+    ];
+
+    let full = `<div class="toc"><h2>Table of Contents</h2><ol style="columns:2;gap:3rem;font-size:1.25rem;line-height:2;">`;
+    titles.forEach((title, i) => {
       const num = (i+1).toString().padStart(2,'0');
-      full += `<li><a href="#ch${num}">${num} Chapter ${i+1}</a></li>`;
+      full += `<li><a href="#ch${num}">${num}. ${title}</a></li>`;
     });
     full += `</ol></div><hr>`;
 
     let loaded = 0;
-    chapters.forEach((file, i) => {
+    files.forEach((file, i) => {
       const num = (i+1).toString().padStart(2,'0');
+      const title = titles[i];
       fetch(file)
-        .then(r => r.text())
+        .then(r => r.ok ? r.text() : Promise.reject())
         .then(text => {
-          full += `<div id="ch${num}"><h2>Chapter ${i+1}</h2>${md.render(text)}</div><hr>`;
-          loaded++;
-          if (loaded === 12) {
-            document.getElementById('book').innerHTML = full;
-          }
+          full += `<div id="ch${num}"><h2>${num}. ${title}</h2>${md.render(text)}</div><hr>`;
         })
         .catch(() => {
-          full += `<div id="ch${num}"><h2>Chapter ${i+1}</h2><p style="color:red;">File not found: ${file}</p></div><hr>`;
+          full += `<div id="ch${num}"><h2>${num}. ${title}</h2><p style="color:red;">Error loading chapter file: ${file}</p></div><hr>`;
+        })
+        .finally(() => {
           loaded++;
           if (loaded === 12) document.getElementById('book').innerHTML = full;
         });
