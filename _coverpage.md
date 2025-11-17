@@ -3,8 +3,10 @@
 # Linux Handbook  
 **by CSIBER Tech Community**
 
-Complete Linux Guide (Beginner to Enterprise)
+Volume 1 (Fundamentals) – Coming Soon  
+Volume 2 (Advanced) – Fully Available Now!
 
 <small>Open Source • Free Forever • 2025 Edition</small>
 
-[Start Reading](/volume-selection)
+[Start Reading](/volume-selection)  
+[Toggle Dark Mode 🌙](javascript:;)
